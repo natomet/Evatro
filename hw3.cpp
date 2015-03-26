@@ -2,14 +2,14 @@
 
 #include<stdio.h>
 #include<math.h>
+//global variables
+/* Input param */
 
-/* Input param */
-/* Input param */
-//int g_set[] = { 3, 4, 9, 14, 15, 19, 28, 37, 47, 50, 54, 56, 59, 61, 70, 73, 78, 81, 92, 95, 97, 99 };
-int g_set[] = {1,2,3,4,6 };
+int g_set[] = { 3, 4, 9, 14, 15, 19, 28, 37, 47, 50, 54, 56, 59, 61, 70, 73, 78, 81, 92, 95, 97, 99 };
+//int g_set[] = {1,2,3,4,6 };
 
 int g_setlen = sizeof(g_set) / sizeof(int);
-
+//if a value is a member of  given set...if yes return 1 ,else 0.
 int is_membership(int v)
 {
     int i;
@@ -21,6 +21,7 @@ int is_membership(int v)
 
     return 0;
 }
+
 
 int is_onebit(int v)
 {
@@ -59,5 +60,5 @@ int main(void)
             challenge3++;
     }
 
-    printf("Solution to challenge 3 is %d\n", challenge3);
+    printf("Solution to problem 3 is %d\n", challenge3);
 }

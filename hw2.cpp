@@ -1,8 +1,12 @@
 
 #include <stdio.h>
 
-unsigned long next_fibonacci()
-{
+
+
+// get next fibonaci number each time when requested
+unsigned long next_fibonacci()    
+{ 
+    
     static unsigned long a = 0;
     static unsigned long b = 1;
     unsigned long nf = a + b;
@@ -13,7 +17,7 @@ unsigned long next_fibonacci()
     return nf;
 }
 
-
+// testing for prime
 int is_prime(unsigned long tested)
 {
     unsigned long divisor;
@@ -27,7 +31,7 @@ int is_prime(unsigned long tested)
 
 
 
-
+// get next prime number each time when requested
 unsigned long next_prime()
 {
     static unsigned long prime = 0;
@@ -44,6 +48,12 @@ unsigned long next_prime()
 }
 
 
+
+
+// We are given number and by  using two functions above each time we request for prime number and compare it with given minimum
+// so we find first fibonacci prime number greater than given minimum
+// for not same prime factors sum;everytime we get prime numbers starting from 2 with the function "next_prime" and we check if it is divisor of X,
+// and if yes we divide X with that prime number until it is not divisible anymore, we store it for sum and in next step we get next prime number and do the same checking
 int main(void)
 {
     unsigned long given_minimum;
